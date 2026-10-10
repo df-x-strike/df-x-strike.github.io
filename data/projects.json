@@ -1,1 +1,53 @@
-{"updated":"","items":[]}
+{
+  "updated": "2026-10-10T18:01:28+00:00",
+  "items": [
+    {
+      "name": "GhostTracker",
+      "url": "https://github.com/df-x-strike/GhostTracker",
+      "description": "OSINT tool in C — Phone, Email & Username lookup",
+      "language": "C",
+      "topics": [],
+      "pushed_at": "2026-06-25T11:47:07Z"
+    },
+    {
+      "name": "omnisoc_ai",
+      "url": "https://github.com/df-x-strike/omnisoc_ai",
+      "description": null,
+      "language": "Python",
+      "topics": [],
+      "pushed_at": "2026-04-11T13:28:23Z"
+    },
+    {
+      "name": "vulnerability-management-platform",
+      "url": "https://github.com/df-x-strike/vulnerability-management-platform",
+      "description": "Open-source vulnerability management platform using Nmap, Nikto and Docker",
+      "language": "JavaScript",
+      "topics": [],
+      "pushed_at": "2026-03-11T17:54:16Z"
+    },
+    {
+      "name": "edr-iot-platform",
+      "url": "https://github.com/df-x-strike/edr-iot-platform",
+      "description": "EDR IoT Platform — SOC Console with MQTT, Docker, ESP32 & Java Swing",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-03-05T17:54:59Z"
+    },
+    {
+      "name": "soc-platform",
+      "url": "https://github.com/df-x-strike/soc-platform",
+      "description": "Unified SOC Incident Intelligence & Response Platform — Java Swing + SQLite",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-02-28T13:30:01Z"
+    },
+    {
+      "name": "iot-securenet",
+      "url": "https://github.com/df-x-strike/iot-securenet",
+      "description": "IoT SecureNet Platform - Security Monitoring & Digital Twin",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-02-27T03:52:30Z"
+    }
+  ]
+}
