@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Antonio Downavan – Analyste SOC & Ingénieur Cybersécurité</title>
+<meta name="description" content="Portfolio : projets, compétences, expériences et formation en cybersécurité (SOC, SIEM, SOAR, réseaux, IoT).">
+<style>
+:root{--bg:#0b1220;--card:#121c31;--tx:#e6ecf5;--mut:#9fb0c8;--ac:#4aa3ff;--bd:#223250}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx)}
+a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
+.w{max-width:1000px;margin:0 auto;padding:0 20px}
+header{padding:64px 0 36px}h1{font-size:2.3rem;margin:0}.sub{color:var(--ac);font-size:1.2rem;margin:.4rem 0 1rem}
+nav{margin-top:26px}nav a{margin-right:16px;color:var(--mut)}
+.btn{display:inline-block;padding:.5rem 1rem;border:1px solid var(--bd);border-radius:8px;margin:.2rem .3rem .2rem 0;color:var(--tx)}.btn.p{background:var(--ac);color:#06101f;border-color:var(--ac)}
+section{padding:34px 0;border-top:1px solid var(--bd)}h2{margin:0 0 18px;font-size:1.5rem}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px}.c h3{margin:0 0 6px;font-size:1.05rem}
+.m{color:var(--mut);font-size:.9rem}.t{display:inline-block;background:#1b2a47;border-radius:20px;padding:1px 9px;margin:6px 4px 0 0;font-size:.78rem;color:var(--mut)}
+.v img{width:100%;border-radius:8px;display:block;margin-bottom:8px}
+.r{display:grid;grid-template-columns:150px 1fr;gap:6px 18px;margin-bottom:16px}.r b{color:var(--ac)}.r ul{margin:4px 0 0;padding-left:18px}
+@media(max-width:600px){.r{grid-template-columns:1fr}h1{font-size:1.8rem}}
+footer{padding:28px 0;color:var(--mut);font-size:.9rem;text-align:center;border-top:1px solid var(--bd)}
+</style></head><body>
+<header><div class="w">
+<h1>Faly Jean Antonio Downavan ANDRIATSITOHAINA</h1>
+<div class="sub">Analyste SOC · Ingénieur Cybersécurité · Systèmes & Réseaux</div>
+<p style="max-width:680px">Étudiant en Master II Professionnel en Objets Connectés et Cybersécurité (École Nationale d'Informatique, Madagascar). Je conçois, déploie et sécurise des infrastructures : détection d'incidents, automatisation de la réponse, sécurité réseau et sécurité des objets connectés.</p>
+<a class="btn p" href="https://github.com/df-x-strike">GitHub</a><a class="btn" href="https://www.youtube.com/@cyberprojects-antonio">YouTube</a><a class="btn" href="https://www.linkedin.com/in/faly-jean-antonio-downavan-andriatsitohaina-00321a3b1">LinkedIn</a><a class="btn" href="mailto:andriatsitohaina02downavan@gmail.com">Me contacter</a>
+<nav><a href="#projets">Projets</a><a href="#videos">Vidéos</a><a href="#competences">Compétences</a><a href="#parcours">Parcours</a><a href="#formation">Formation</a></nav>
+</div></header>
+<main class="w">
+<section id="projets"><h2>Projets GitHub</h2><div class="g" id="p"></div><p class="m" id="pu"></p></section>
+<section id="videos"><h2>Dernières vidéos</h2><div class="g" id="v"></div><p class="m" id="vu"></p></section>
+<section id="competences"><h2>Compétences</h2><div class="g" id="s"></div></section>
+<section id="parcours"><h2>Expériences et projets</h2><div id="e"></div></section>
+<section id="formation"><h2>Formation</h2><div id="f"></div></section>
+</main>
+<footer>© <span id="y"></span> Antonio Downavan · Les projets et vidéos se mettent à jour automatiquement.</footer>
+<script>
+const $=s=>document.querySelector(s);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e};
+const load=async u=>{try{const r=await fetch(u+'?v='+Date.now());return r.ok?await r.json():null}catch(e){return null}};
+const dt=s=>s?new Date(s).toLocaleDateString('fr-FR',{year:'numeric',month:'long',day:'numeric'}):'';
+const SK=[["SOC / SIEM / SOAR","Wazuh, Suricata, Snort, n8n + IA, TheHive, Cortex, MISP, VirusTotal, OTX AlienVault"],["Supervision & logs","Zabbix, PRTG, ntopng, Grafana, Graylog, InfluxDB"],["Pentest","Nmap, Nikto, Burp Suite, Metasploit, Medusa, Aircrack-ng"],["Réseaux","TCP/IP, routage, VLAN, VPN (WireGuard), pfSense, GNS3, EVE-NG"],["Systèmes & virtualisation","Windows Server, Debian, Ubuntu, Docker, VMware, VirtualBox, Hyper-V"],["Développement & scripts","Python, Java, JavaScript, C/C++, PHP, Bash"],["IoT & électronique","Raspberry Pi, ESP32, Arduino, MQTT, Node-RED, KiCad"],["Langues","Malgache (maternelle), français, anglais technique"]];
+const EX=[["2026 – en cours","Stagiaire – Plateforme de sécurité SOC / SIEM / SOAR",["Sécurité périmétrique (pfSense, WireGuard)","Wazuh, Snort, automatisation n8n + IA, enrichissement MISP, VirusTotal, OTX AlienVault","Supervision avec ntopng, InfluxDB et Grafana ; simulation d'attaques"]],["2023 – 2024","Stagiaire – IDS/IPS et segmentation réseau",["Déploiement de Suricata sur serveur Ubuntu","Segmentation du réseau par VLAN"]],["2025","Plateformes SOC et IoT (projets personnels)",["Unified SOC Incident Intelligence & Response Platform","IoT SecureNet (Digital Twin), plateforme IoT avec EDR, gestion des vulnérabilités"]],["Master I","Sécurisation d'un réseau IoT – agriculture intelligente",["MQTT avec TLS, ACL et authentification ; Node-RED, InfluxDB, Grafana"]]];
+const ED=[["2025 – 2026","Master II Professionnel en Objets Connectés et Cybersécurité","École Nationale d'Informatique"],["2024 – 2025","Master I Professionnel en Objets Connectés et Cybersécurité","École Nationale d'Informatique"],["2021 – 2024","Licence Professionnelle en Informatique","École Nationale d'Informatique"],["2020","Baccalauréat série D, mention Assez Bien","Lycée Sainte Thérèse, Sakaraha"]];
+SK.forEach(([a,b])=>{const c=el('div','c');c.append(el('h3','',a),el('div','m',b));$('#s').append(c)});
+EX.forEach(([d,t,l])=>{const r=el('div','r');r.append(el('b','',d));const x=el('div');x.append(el('strong','',t));const u=el('ul');l.forEach(i=>u.append(el('li','',i)));x.append(u);r.append(x);$('#e').append(r)});
+ED.forEach(([d,t,o])=>{const r=el('div','r');r.append(el('b','',d));const x=el('div');x.append(el('strong','',t),el('div','m',o));r.append(x);$('#f').append(r)});
+$('#y').textContent=new Date().getFullYear();
+(async()=>{
+const p=await load('data/projects.json');
+if(p&&p.items&&p.items.length){p.items.forEach(i=>{const c=el('div','c');const h=el('h3');const a=el('a','',i.name);a.href=i.url;h.append(a);c.append(h,el('div','m',i.description||'Projet open source.'));
+[i.language,...(i.topics||[])].filter(Boolean).forEach(t=>c.append(el('span','t',t)));c.append(el('div','m','Mis à jour le '+dt(i.pushed_at)));$('#p').append(c)});$('#pu').textContent='Liste actualisée automatiquement depuis GitHub.'}
+else $('#p').append(el('p','m','Les projets arrivent bientôt. En attendant, voir github.com/df-x-strike.'));
+const v=await load('data/videos.json');
+if(v&&v.items&&v.items.length){v.items.forEach(i=>{const c=el('div','c v');const a=el('a');a.href='https://www.youtube.com/watch?v='+encodeURIComponent(i.id);const im=el('img');im.src='https://i.ytimg.com/vi/'+encodeURIComponent(i.id)+'/hqdefault.jpg';im.alt=i.title;im.loading='lazy';a.append(im,el('strong','',i.title));c.append(a,el('div','m',dt(i.published)));$('#v').append(c)});$('#vu').textContent='Liste actualisée automatiquement depuis YouTube.'}
+else $('#v').append(el('p','m','Les premières vidéos arrivent bientôt sur la chaîne YouTube.'));
+})();
+</script></body></html>
