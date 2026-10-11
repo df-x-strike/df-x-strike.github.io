@@ -1,6 +1,11 @@
 {
-  "updated": "2026-10-10T18:01:29+00:00",
+  "updated": "2026-10-11T12:02:34+00:00",
   "items": [
+    {
+      "id": "Uv53ELTyva4",
+      "title": "Installer Ubuntu Server 24.04 LTS : installation et première configuration (guide débutant)",
+      "published": "2026-10-11T03:53:44+00:00"
+    },
     {
       "id": "BKzh71mXz7Y",
       "title": "Installer Docker sur Ubuntu Server 24.04 (méthode officielle) | Guide débutant",
