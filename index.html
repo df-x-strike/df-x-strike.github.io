@@ -14,7 +14,7 @@ section{padding:34px 0;border-top:1px solid var(--bd)}h2{margin:0 0 18px;font-si
 .g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
 .c{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px}.c h3{margin:0 0 6px;font-size:1.05rem}
 .m{color:var(--mut);font-size:.9rem}.t{display:inline-block;background:#1b2a47;border-radius:20px;padding:1px 9px;margin:6px 4px 0 0;font-size:.78rem;color:var(--mut)}
-.v img{width:100%;border-radius:8px;display:block;margin-bottom:8px}
+.l{border-style:dashed}.v img{width:100%;border-radius:8px;display:block;margin-bottom:8px}
 .r{display:grid;grid-template-columns:150px 1fr;gap:6px 18px;margin-bottom:16px}.r b{color:var(--ac)}.r ul{margin:4px 0 0;padding-left:18px}
 @media(max-width:600px){.r{grid-template-columns:1fr}h1{font-size:1.8rem}}
 footer{padding:28px 0;color:var(--mut);font-size:.9rem;text-align:center;border-top:1px solid var(--bd)}
@@ -29,7 +29,7 @@ footer{padding:28px 0;color:var(--mut);font-size:.9rem;text-align:center;border-
 <main class="w">
 <section id="projets"><h2>Projets GitHub</h2><div class="g" id="p"></div><p class="m" id="pu"></p></section>
 <section id="videos"><h2>Dernières vidéos</h2><div class="g" id="v"></div><p class="m" id="vu"></p></section>
-<section id="competences"><h2>Compétences</h2><div class="g" id="s"></div></section>
+<section id="competences"><h2>Compétences</h2><div class="g" id="s"></div><p class="m">Les cartes en pointillés sont des compétences en cours d'apprentissage en laboratoire : les projets correspondants arrivent sur GitHub et YouTube.</p></section>
 <section id="parcours"><h2>Expériences et projets</h2><div id="e"></div></section>
 <section id="formation"><h2>Formation</h2><div id="f"></div></section>
 </main>
@@ -39,10 +39,11 @@ const $=s=>document.querySelector(s);
 const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e};
 const load=async u=>{try{const r=await fetch(u+'?v='+Date.now());return r.ok?await r.json():null}catch(e){return null}};
 const dt=s=>s?new Date(s).toLocaleDateString('fr-FR',{year:'numeric',month:'long',day:'numeric'}):'';
-const SK=[["SOC / SIEM / SOAR","Wazuh, Suricata, Snort, n8n + IA, TheHive, Cortex, MISP, VirusTotal, OTX AlienVault"],["Supervision & logs","Zabbix, PRTG, ntopng, Grafana, Graylog, InfluxDB"],["Pentest","Nmap, Nikto, Burp Suite, Metasploit, Medusa, Aircrack-ng"],["Réseaux","TCP/IP, routage, VLAN, VPN (WireGuard), pfSense, GNS3, EVE-NG"],["Systèmes & virtualisation","Windows Server, Debian, Ubuntu, Docker, VMware, VirtualBox, Hyper-V"],["Développement & scripts","Python, Java, JavaScript, C/C++, PHP, Bash"],["IoT & électronique","Raspberry Pi, ESP32, Arduino, MQTT, Node-RED, KiCad"],["Langues","Malgache (maternelle), français, anglais technique"]];
+const SK=[["SOC / SIEM / SOAR","Wazuh, Suricata, Snort, n8n + IA, TheHive, Cortex, MISP, VirusTotal, OTX AlienVault"],["Supervision & logs","Zabbix, PRTG, ntopng, Grafana, Graylog, InfluxDB"],["Pentest","Nmap, Nikto, Burp Suite, Metasploit, Medusa, Aircrack-ng"],["Réseaux","TCP/IP, routage, VLAN, VPN (WireGuard), pfSense, GNS3, EVE-NG"],["Systèmes & virtualisation","Windows Server, Debian, Ubuntu, Docker, VMware, VirtualBox, Hyper-V"],["Développement & scripts","Python, Java, JavaScript, C/C++, PHP, Bash"],["IoT & électronique","Raspberry Pi, ESP32, Arduino, MQTT, Node-RED, KiCad"],["Outils & bureautique","Git / GitHub, Docker Compose, VS Code, Microsoft Office, LibreOffice, Google Workspace, KiCad, AutoCAD, Wokwi, Arduino IDE"],["Langues","Malgache (maternelle), français, anglais technique"],
+["En cours : administration Windows","Active Directory, GPO, PowerShell, partages et droits NTFS, Windows Server Backup",1],["En cours : sauvegarde & support","restic / BorgBackup / rsync (règle 3-2-1), tests de restauration, GLPI / osTicket",1],["En cours : Linux & automatisation","Ansible, durcissement (Fail2ban, Lynis), Nginx reverse proxy",1],["En cours : cloud","Microsoft 365, Microsoft Entra ID, Azure",1],["En cours : détection","Règles Sigma, Elastic / Graylog, MITRE ATT&CK, threat hunting",1]];
 const EX=[["2026 – en cours","Stagiaire – Plateforme de sécurité SOC / SIEM / SOAR",["Sécurité périmétrique (pfSense, WireGuard)","Wazuh, Snort, automatisation n8n + IA, enrichissement MISP, VirusTotal, OTX AlienVault","Supervision avec ntopng, InfluxDB et Grafana ; simulation d'attaques"]],["2023 – 2024","Stagiaire – IDS/IPS et segmentation réseau",["Déploiement de Suricata sur serveur Ubuntu","Segmentation du réseau par VLAN"]],["2025","Plateformes SOC et IoT (projets personnels)",["Unified SOC Incident Intelligence & Response Platform","IoT SecureNet (Digital Twin), plateforme IoT avec EDR, gestion des vulnérabilités"]],["Master I","Sécurisation d'un réseau IoT – agriculture intelligente",["MQTT avec TLS, ACL et authentification ; Node-RED, InfluxDB, Grafana"]]];
 const ED=[["2025 – 2026","Master II Professionnel en Objets Connectés et Cybersécurité","École Nationale d'Informatique"],["2024 – 2025","Master I Professionnel en Objets Connectés et Cybersécurité","École Nationale d'Informatique"],["2021 – 2024","Licence Professionnelle en Informatique","École Nationale d'Informatique"],["2020","Baccalauréat série D, mention Assez Bien","Lycée Sainte Thérèse, Sakaraha"]];
-SK.forEach(([a,b])=>{const c=el('div','c');c.append(el('h3','',a),el('div','m',b));$('#s').append(c)});
+SK.forEach(([a,b,l])=>{const c=el('div',l?'c l':'c');c.append(el('h3','',a),el('div','m',b));$('#s').append(c)});
 EX.forEach(([d,t,l])=>{const r=el('div','r');r.append(el('b','',d));const x=el('div');x.append(el('strong','',t));const u=el('ul');l.forEach(i=>u.append(el('li','',i)));x.append(u);r.append(x);$('#e').append(r)});
 ED.forEach(([d,t,o])=>{const r=el('div','r');r.append(el('b','',d));const x=el('div');x.append(el('strong','',t),el('div','m',o));r.append(x);$('#f').append(r)});
 $('#y').textContent=new Date().getFullYear();
