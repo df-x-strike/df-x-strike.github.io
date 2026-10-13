@@ -1,12 +1,18 @@
 {
-  "updated": "2026-10-13T09:38:02+00:00",
+  "updated": "2026-10-13T12:06:48+00:00",
   "items": [
     {
       "name": "vlan-segmentation-packet-tracer",
       "url": "https://github.com/df-x-strike/vlan-segmentation-packet-tracer",
       "description": "Segmentation réseau : VLAN, ACL et sécurité des switchs (Cisco Packet Tracer).",
       "language": null,
-      "topics": [],
+      "topics": [
+        "acl",
+        "cisco-packet-tracer",
+        "cybersecurity",
+        "network-security",
+        "vlan"
+      ],
       "pushed_at": "2026-10-13T09:33:21Z"
     },
     {
